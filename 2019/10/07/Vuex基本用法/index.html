@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Vuex基本用法</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p><strong>注:下面的js文件中间都不加点,否则会使的markdown编译错误</strong></p>
+<h1 id="Vuex状态管理基本用法"><a href="#Vuex状态管理基本用法" class="headerlink" title="Vuex状态管理基本用法"></a>Vuex状态管理基本用法</h1><h2 id="让代码更加清晰-让数据之间的传递更加的方便清晰-统一化管理数据。"><a href="#让代码更加清晰-让数据之间的传递更加的方便清晰-统一化管理数据。" class="headerlink" title="让代码更加清晰,让数据之间的传递更加的方便清晰,统一化管理数据。"></a>让代码更加清晰,让数据之间的传递更加的方便清晰,统一化管理数据。</h2><h2 id="state-数据集中-getters-数据获取-，Mutation-状态改变-Actions-异步操作"><a href="#state-数据集中-getters-数据获取-，Mutation-状态改变-Actions-异步操作" class="headerlink" title="state(数据集中),getters(数据获取)，Mutation(状态改变), Actions(异步操作)"></a>state(数据集中),getters(数据获取)，Mutation(状态改变), Actions(异步操作)</h2><h3 id="1-Vuex的引用-在脚手架下进行"><a href="#1-Vuex的引用-在脚手架下进行" class="headerlink" title="1. Vuex的引用 (在脚手架下进行)"></a>1. Vuex的引用 (在脚手架下进行)</h3><ul>
+<li><p>首先创建一个storejs文件,即状态管理的js文件. 主要目的是引用Vuex，注册Vuex和<strong>暴露</strong>Vuex，具体用法如下.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//storejs 注:</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span><span class="comment">//vue也要引用</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span><span class="comment">//引用Vuex</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)<span class="comment">//注册Vuex</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line"></span><br><span class="line">&#125;)<span class="comment">//ES6语法 将store暴露出去.</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)<span class="comment">//注册Vuex</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其次在mainjs总管理文件下也要把store进行注册,以便于在每个页面下<strong>可以直接使用this.$store调用</strong>,如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//mainjs</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    store,</span><br><span class="line">    ......</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-Vuex之state方法"><a href="#2-Vuex之state方法" class="headerlink" title="2.Vuex之state方法"></a>2.Vuex之state方法</h3><ul>
+<li><p>state和data作用一样，存放数据的地方，里面可以放任意类型的数据.</p>
+</li>
+<li><p>外部调用就利用this.<strong>$store</strong>.state.data</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//storejs</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state:&#123;</span><br><span class="line">        data1: <span class="string">""</span>,</span><br><span class="line">        data2: <span class="string">""</span>,</span><br><span class="line">        ......</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//外部页面组件调用</span></span><br><span class="line"><span class="keyword">this</span>.$store.state.data1;<span class="comment">//调用data1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-getters方法-对数据的加工再获取"><a href="#3-getters方法-对数据的加工再获取" class="headerlink" title="3.getters方法(对数据的加工再获取)"></a>3.getters方法(对数据的加工再获取)</h3><ul>
+<li>有时候我们的原数据(state里的数据)可能需要进行加工处理，可能处理后的数据又需要被多个组件同时使用，使用getter方法，把加工方法集中化管理. (所以基本来说getter方法一般都被用于组件的computed方法里)</li>
+<li>代码实例如下</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state:&#123;</span><br><span class="line">        data1:&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    getters:&#123;</span><br><span class="line">        dataChange(state)&#123;<span class="comment">//直接传入传入原数据state</span></span><br><span class="line">            ......</span><br><span class="line">            <span class="keyword">return</span> ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//外部调用getter方法,(在conputed方法内部调用)</span></span><br><span class="line">computed:&#123;</span><br><span class="line">    dataChange()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.$store.getters.dataChange;<span class="comment">//dataChange名字不一定相同.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-mutation方法-数据变化处理-但只能是同步函数"><a href="#4-mutation方法-数据变化处理-但只能是同步函数" class="headerlink" title="4.mutation方法.(数据变化处理,但只能是同步函数)"></a>4.mutation方法.(数据变化处理,但只能是同步函数)</h3><ul>
+<li><p>和state意义相同，将处理方法集中化管理（但是只能同步处理)</p>
+</li>
+<li><p>用法和methods相同，例子如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mutations: &#123;</span><br><span class="line">      reducePrice: <span class="function">(<span class="params">state,payload</span>) =&gt;</span> &#123;</span><br><span class="line">          state.products.forEach(<span class="function"><span class="params">product</span> =&gt;</span> &#123;</span><br><span class="line">            product.price -= payload;<span class="comment">//payload进行参数传递</span></span><br><span class="line">          &#125;)<span class="comment">//循环遍历每一个并进行操作</span></span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">//payload将在下面进行进一步阐述</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>但是有个问题是，mutation不能进行异步函数处理，只能同步处理，效率较低，同时，外部的组件或者页面不能直接通过commit提交mutation内部的方法,像<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* 为了解决这个问题,于是便用到了actions方法来处理这个问题.</span><br><span class="line"></span><br><span class="line">### 5.Actions方法(异步操作)</span><br><span class="line"></span><br><span class="line">**事先说明一点，Actions本身不直接提交任何处理方法，它只是一种架构思想，它提交(commit)的永远是mutations内部的方法.**</span><br><span class="line"></span><br><span class="line">[参考于博客园](https://www.cnblogs.com/wupeng88/p/8931728.html)</span><br><span class="line"></span><br><span class="line">* 它即可解决异步操作问题，同时也可以间接调用mutation内部的方法.代码如下</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">mutations: &#123;</span><br><span class="line"></span><br><span class="line">      reducePrice: (state,payload) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">          state.products.forEach(product =&gt; &#123;</span><br><span class="line">            product.price -= payload;//payload进行参数传递</span><br><span class="line">          &#125;)//循环遍历每一个并进行操作</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;//可以实现异步操作</span><br><span class="line">    reducePrice:(context,payload) =&gt; &#123;</span><br><span class="line">      setTimeout(function () &#123;</span><br><span class="line">        context.commit(&quot;reducePrice&quot;,payload);//payload进行参数传递,第一参数提交mutation内部方法</span><br><span class="line">      &#125;,2000)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//外部代码如下</span><br><span class="line">reducePrice(amount)&#123;</span><br><span class="line">    this.$store.dispatch(&quot;reducePrice&quot;,amount);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>对上述代码进行阐述</p>
+</li>
+</ul>
+<ol>
+<li><p>reducePrice的context是什么: 和state一样，可以调用源数据.</p>
+</li>
+<li><p>payload是啥: payload实质上是外部调用使传入的参数，就拿该案例分析，它的参数路径为: 外部函数的amount -&gt; actions的payload -&gt; mutations的payload.</p>
+</li>
+<li><p>dispatch是啥: 分发actions，是调用actions的必要方法.第一个参数是actions内部对应的方法，第二个参数就是要传入的值.</p>
+</li>
+</ol>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/07/Vuex基本用法/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/07/Vuex基本用法/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
