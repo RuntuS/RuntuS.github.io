@@ -177,8 +177,11 @@
 <li>对于同步事件，js引擎直接把事件压入事件栈中，并且顺序同步执行。</li>
 <li>而对于异步事件，则会先将异步事件在其他线程上先处理，处理完毕后，通过回调函数，将返回的结果推入一个名为消息队列的数据结果中暂存，即不会马上返回结果，先挂载在消息队列中。</li>
 <li>当主线程（即栈中事件）执行完毕后，JS引擎就会从消息队列中依次取出任务到主线程(JS线程)中，此时主线程开始执行新的任务，并按照此规律依次循环下去，这种情况就叫做事件循环。</li>
+<li>这里特别说明，异步任务从其他线程进入消息队列前提是异步任务内部已经执行完毕，并且返回了结果，只不过没有被JS执行，此时才会被放入消息队列，如果是下列情况，则不是马上返回。</li>
+<li>同时还要注意优先级的问题，对于同样的事件和异步函数,会先执行事件代码。</li>
 <li>下面将展示一张Ajax调用的机理图。<br>图源: <a href="https://juejin.im/post/5a6ad46ef265da3e513352c8" target="_blank" rel="noopener">掘金</a><br><img src="https://user-gold-cdn.xitu.io/2018/1/26/161314dcb17a84ad?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></li>
 </ul>
+<p>(参考文章:1.掘金:JavaScript异步机制详解)[<a href="https://juejin.im/post/5a6ad46ef265da3e513352c8]" target="_blank" rel="noopener">https://juejin.im/post/5a6ad46ef265da3e513352c8]</a></p>
 
             </div>
 
