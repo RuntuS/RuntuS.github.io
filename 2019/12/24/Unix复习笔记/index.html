@@ -1,0 +1,700 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Unix复习笔记</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="1-Unix操作系统概述"><a href="#1-Unix操作系统概述" class="headerlink" title="1.Unix操作系统概述"></a>1.Unix操作系统概述</h1><h2 id="Unix功能特征"><a href="#Unix功能特征" class="headerlink" title="Unix功能特征"></a>Unix功能特征</h2><ol>
+<li>交互式$\color{red}{分时多用户}$（这是最重要的)</li>
+<li>软件复用</li>
+<li>可移植性强</li>
+<li>配置灵活，适应性强</li>
+<li>界面方便高效</li>
+<li>安全机制完善</li>
+<li>多国语言支持</li>
+<li>支持多种网络协议</li>
+</ol>
+<h1 id="2-Unix操作系统入门"><a href="#2-Unix操作系统入门" class="headerlink" title="2.Unix操作系统入门"></a>2.Unix操作系统入门</h1><h2 id="帐号控制"><a href="#帐号控制" class="headerlink" title="帐号控制"></a>帐号控制</h2><ul>
+<li>登陆: login </li>
+<li>退出: exit</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit //退出</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>修改密码: passwd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br><span class="line">Old password: ...</span><br><span class="line">New password: ...</span><br><span class="line">Re-enter new password: ...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用户基本信息文件在 /etc/passwd</p>
+</li>
+</ul>
+<h2 id="简单命令"><a href="#简单命令" class="headerlink" title="简单命令"></a>简单命令</h2><ol>
+<li><p>date : 显示当前日期.</p>
+</li>
+<li><p>who : 查看所有已登陆用户情况.</p>
+</li>
+</ol>
+<ul>
+<li>$\color{red}{注:一个用户名可以被一个人多次登陆或者被多个人同时登陆，即不会像玩游戏一样被挤下线，who命令查看时可能存在多个相同名字的用户在线。}$</li>
+</ul>
+<ol start="3">
+<li>通用命令格式</li>
+</ol>
+<ul>
+<li>$ 命令名 [-命令行任选项] [命令参数]</li>
+<li>注意方括号表示其中的内容可以缺省。 </li>
+<li>命令行任选项通常由多个字符组成，命令参数主要用于指明操作对象，一般来说都是文件名。</li>
+</ul>
+<ol start="4">
+<li>命令行输入</li>
+</ol>
+<ul>
+<li><p>^h删除前面字符。 ^u删除一行字符。</p>
+</li>
+<li><p>联机手册 man 命令 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man who //展示who的各种操作。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意#是超级用户提示符。(root权限)</p>
+</li>
+</ul>
+<h1 id="3-编辑程序vi"><a href="#3-编辑程序vi" class="headerlink" title="3.编辑程序vi"></a>3.编辑程序vi</h1><h2 id="编辑器类型"><a href="#编辑器类型" class="headerlink" title="编辑器类型"></a>编辑器类型</h2><ul>
+<li>行编辑器 -  编辑单位为行 – 命令为edit,e,ex</li>
+<li>屏幕编辑器 – 编辑单位为字符 – 命令为vi,v,view</li>
+<li>而这里介绍的vi编辑器则是屏幕编辑器。</li>
+</ul>
+<h3 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h3><ul>
+<li>vi两种模式</li>
+</ul>
+<ol>
+<li>命令模式: 进入vi的初始模式，例如移动光标，粘贴，查找文本等。</li>
+<li>文本输入模式: 命令模式的子模式，除了ESC键外的所有键都作为键入字符添加到文本中，按ESC键返回命令模式，才可进行操作。</li>
+</ol>
+<ul>
+<li><p><strong>vi的基本使用</strong></p>
+</li>
+<li><p>进入vi:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span>vi filename</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开始编辑文件filename，如果filename不存在，则新创建一个文件。  </p>
+</li>
+<li><p><strong>退出vi</strong>(前提:在命令模式下)</p>
+</li>
+<li><p>发出:wq命令，保存文件内容并且退出。（write quit)</p>
+</li>
+<li><p><strong>从命令模式到文本模式命令键</strong></p>
+</li>
+</ul>
+<ol>
+<li><code>i</code> -&gt; 光标前插入文本</li>
+<li><code>I</code> -&gt; 光标所在行首插入文本</li>
+<li><code>a</code> -&gt; 光标后加入文本</li>
+<li><code>A</code> -&gt; 光标所在行尾加入文本</li>
+<li><code>o</code> -&gt; 光标所在行下新加一行</li>
+<li><code>O</code> -&gt; 光标所在行上新加一行</li>
+</ol>
+<ul>
+<li><p><strong>命令模式键位</strong></p>
+</li>
+<li><p>h -&gt; 左 ；j -&gt; 下 ； k -&gt; 上 ； l -&gt; 右 </p>
+</li>
+<li><p>x -&gt; 删除光标所占字符 ， dw -&gt; 删除从光标到<em>单词</em>结束所有字符.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dasda(光标指向这里)sdasd</span><br><span class="line">dw(按下dw)</span><br><span class="line">//删除sdasd</span><br><span class="line">dasda</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>D -&gt; 删除光标所在位置到行尾部分</p>
+</li>
+<li><p>dd -&gt; 删除光标所在行</p>
+</li>
+<li><p><strong>保存文本，退出编辑程序</strong></p>
+</li>
+<li><p>:wq 保存文本，退出</p>
+</li>
+<li><p>:w 保存文本，不退出</p>
+</li>
+<li><p>:w file 文本保存到file里，不退出</p>
+</li>
+<li><p>:q 退出vi(如果不保存，则会报错，然后被拒绝退出)</p>
+</li>
+<li><p>:q! 强制退出</p>
+</li>
+</ul>
+<h1 id="4-Unix文件系统"><a href="#4-Unix文件系统" class="headerlink" title="4.  Unix文件系统"></a>4.  Unix文件系统</h1><h2 id="Unix文件类型"><a href="#Unix文件类型" class="headerlink" title="Unix文件类型"></a>Unix文件类型</h2><ul>
+<li><strong>注意:对于Unix操作系统来说，文件是字节序列。</strong></li>
+</ul>
+<ol>
+<li>普通文件，用vi编辑器创建的文件都是普通文件。</li>
+<li>目录文件，注意文件夹（即目录文件）也是文件。</li>
+<li>特殊文件，包含与外部系统，如打印机等相联系的特定信息。</li>
+</ol>
+<ul>
+<li><p><strong>重要知识点:</strong> $\color{red}{文件和进程是Unix系统中的两个最基本的概念。}$</p>
+</li>
+<li><p><strong>路径名</strong></p>
+</li>
+</ul>
+<ol>
+<li>相对路径: 起始点是当前路径。即开头是以当前路径名开头，例如Unix/fuxi.md</li>
+<li>绝对路径: 起始点是根路径。例如/Desktop/gooda</li>
+</ol>
+<ul>
+<li><strong>文件名</strong></li>
+<li>所有的Unix系统至少允许14个字符长的文件名，大多数系统支持255个字符的文件名。</li>
+<li>Unix系统对大小写敏感，大写和小写是不同的意思。</li>
+<li>文件名可用字符。</li>
+</ul>
+<ol>
+<li>( A~Z ) 大写字母</li>
+<li>( _ ) 下划线</li>
+<li>( a~z ) 小写字母</li>
+<li>( . ) 小数点</li>
+<li>( 0~9 ) 数字</li>
+</ol>
+<ul>
+<li>注意: 以(.)开头的文件是隐含(隐藏)文件名，在列目录操作时候通常不显示出来。</li>
+</ul>
+<h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><p><strong>1</strong>. pwd ： 显示当前工作路径。<br><strong>2</strong>. cd 改变当前工作路径。<br><strong>注: cd后面可以接绝对路径，也可以接相对路径，有几个特殊的用法下面会说明。</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// cd的特殊用法</span><br><span class="line"><span class="meta">$</span> cd ..     -&gt; 前往父目录</span><br><span class="line"><span class="meta">$</span> cd        -&gt; (缺省状态下)返回用户主目录(注意，是用户的主目录，不一定是根目录，这是root管理员决定的)</span><br></pre></td></tr></table></figure>
+
+<p><em>补充一下 : *</em>主目录:** 系统管理员在系统上创建所有的帐号，并且为每个帐号都分配一个特定的目录，这个目录就是主目录。</p>
+<p><strong>3</strong>. mkdir -&gt; 创建目录，且可以同时创新多个目录。（用户在创建目录的父目录具有写权限)</p>
+<p><strong>4</strong>. rmdir -&gt; 删除目录, <strong>删除的目录是空目录</strong>。(用户在要被删除目录的父目录下具有写权限。)</p>
+<p><strong>5</strong>. ls [-options] [filenames]</p>
+<ul>
+<li>filenames如果是普通文件，则列出文件基本信息，如果是目录文件，则列出目录下的文件信息.</li>
+<li>ls命令常用任选项<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ls -a   //列出所有文件，包含隐藏文件</span><br><span class="line">$ ls -F  // 区分文件类型，目录文件(文件名后加 / )，可执行文件(文件名后加 * )</span><br><span class="line">$ ls -R //递归列出目录内容</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>ls -l</strong> 重要命令. 展示文件七项主要信息。</p>
+<ul>
+<li>重要内容请看书，在电脑上不好操作。</li>
+<li>特别说明第二列的链接数，一个目录文件的链接至少有两个（即指向自己和指向父目录,参照文件系统)</li>
+</ul>
+<h2 id="文件权限的检测"><a href="#文件权限的检测" class="headerlink" title="文件权限的检测"></a>文件权限的检测</h2><ul>
+<li><p>常用ls -l命令检测文件类型:</p>
+</li>
+<li><p>rwxrw-r– </p>
+</li>
+<li><p>前三个为本用户命令，4-6为同组用户权限，7-9为其他用户权限。</p>
+</li>
+<li><p><strong>修改文件权限命令 chmod</strong></p>
+</li>
+<li><p>chmod pattern filename</p>
+</li>
+<li><p>pattern是修改后的权限。有两种表示方式：</p>
+</li>
+</ul>
+<ol>
+<li>字母形式</li>
+</ol>
+<ul>
+<li>用户类别(u,g,o) , 如何改变 (+,-) 和 权限 (w,r,x) 组成，例如下<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> chmod u+x file1 -&gt; 使得file1的本用户(u)权限有了可执行权限(x)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> chmod o-w file2 file3 -&gt; 使得file2 file3 不能(-)被其他用户(o)所写(w)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>数值形式</li>
+</ol>
+<ul>
+<li><p>数值形式很简单，就是将rwx对应的位置换成二进制码，有该权限为1，无该权限为0，例如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">权限 rwx rw- rw- -----&gt; 二进制码 111 110 110  ----&gt; 八进制码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>注意：</strong>在使用数字模式的时候，一般都是用八进制码进行修改. </p>
+</li>
+</ul>
+<h2 id="文件名匹配"><a href="#文件名匹配" class="headerlink" title="文件名匹配"></a>文件名匹配</h2><ul>
+<li>通配符</li>
+</ul>
+<ol>
+<li>? -&gt;  匹配任何单个字符</li>
+<li>* -&gt;  匹配任何多个字符</li>
+<li>[list] -&gt; 匹配list中的任意单个字符</li>
+<li>[!list] -&gt; 匹配不在list中的任意单个字符<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">com[abc] -&gt; 匹配 coma comb comc 三者</span><br><span class="line">dot[a-z] -&gt; 匹配coma -&gt; comz 这26种情况</span><br><span class="line">dep[13-79] -&gt; 匹配dep1,dep3,dep4,dep5,dep6,dep7,dep9. 注意横线的范围只涉及到相邻横线的两个字符。</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="文件管理命令"><a href="#文件管理命令" class="headerlink" title="文件管理命令"></a>文件管理命令</h2><ol>
+<li>cat命令 显示文件内容（一次性全部显示）。</li>
+<li>more命令 显示文件内容 (逐屏显示)。</li>
+<li>rm命令 删除文件</li>
+</ol>
+<ul>
+<li>rm -i 删除前确认是否删除。 rm -r 强制删除文件，可用于删除非空目录文件（注意和rmdir区别)</li>
+</ul>
+<ol start="4">
+<li>cp命令 复制文件</li>
+</ol>
+<ul>
+<li>cp [-i][-r] oldfile newfile</li>
+<li>将oldfile的内容拷贝到newfile中，newfile如果已存在，则覆盖。</li>
+<li>-i : 如果newfile已存在，则会请求一次。</li>
+<li>-r : 将已存在的目录下的<strong>所有</strong>内容拷贝到新的目录下。</li>
+<li><strong>如果newfile是目录文件，则会将oldfile原封不动的拷贝到newfile目录下，且名字相同。</strong></li>
+</ul>
+<ol start="5">
+<li>mv命令 移动文件</li>
+</ol>
+<ul>
+<li>mv aaa bbb</li>
+<li>将aaa文件更名为bbb或者将aaa文件移动到bbb目录下，并且源文件不存在（注意和cp指令区别)</li>
+<li>细节情况与cp相同，这里不加起叙述。</li>
+</ul>
+<ol start="6">
+<li>ln命令 链接文件 </li>
+</ol>
+<ul>
+<li>相当于给文件再取一个名字。这里把名字当作指针，相当于再创建一个指针指向内容，操作任何一个指针（名字)，都会改变相应的文件的内容，如果删除其中一个文件名，只要名字没有删除完，则文件就不会消失。</li>
+</ul>
+<h2 id="基本使用程序-这个很重要，特别是在shell编程中突出明显"><a href="#基本使用程序-这个很重要，特别是在shell编程中突出明显" class="headerlink" title="基本使用程序(这个很重要，特别是在shell编程中突出明显)"></a>基本使用程序(这个很重要，特别是在shell编程中突出明显)</h2><ol>
+<li>文件统计wc命令, wc [-lwc] file1 [file2 file3]</li>
+</ol>
+<ul>
+<li>-l 只对行数进行统计    -w 只对单词数进行统计  -c 只对字符数进行统计。</li>
+</ul>
+<ol start="2">
+<li><p>find命令 了解下即可</p>
+</li>
+<li><p>sort命令 对文本内容进行排序，行排序。排序依据是ASCII码。</p>
+</li>
+<li><p>grep命令 在一个或多个文件中搜索指定字符串，<strong>并显示包含字符串的行。</strong></p>
+</li>
+</ol>
+<ul>
+<li>grep String file1 file2 …</li>
+</ul>
+<ol start="5">
+<li>head命令 显示指定文件头部。</li>
+<li>tail命令 显示指定文件尾部。</li>
+</ol>
+<h1 id="5-shell的交互功能及进程"><a href="#5-shell的交互功能及进程" class="headerlink" title="5.shell的交互功能及进程"></a>5.shell的交互功能及进程</h1><ul>
+<li>shell的两大功能</li>
+</ul>
+<ol>
+<li>命令解释器: 解释用户发出的系统命令。</li>
+<li>程序设计语言。</li>
+</ol>
+<h2 id="输入输出重定向及管道"><a href="#输入输出重定向及管道" class="headerlink" title="输入输出重定向及管道"></a>输入输出重定向及管道</h2><ol>
+<li><strong>输出重定向</strong></li>
+</ol>
+<ul>
+<li><p>command &gt; filename 将command执行的结果输出到文件名为filename的文件中。会覆盖文件。</p>
+</li>
+<li><p>command &gt;&gt; filename 执行效果和 &gt; 一样，不过是追加文件，而不是覆盖文件。</p>
+</li>
+<li><p><strong>补充一点:</strong> Cat和 &gt;连用可以用来创建文件，例如下.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat &gt; newfile</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述命令中，由于cat是缺省状态，所以作用是等待键盘输入，并且输入一行，就会打印一行相同的字符出来，然后将打印处的字符重定向到新文件中，于是便形成了新文件。使用^D来退出。</p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>输入重定向</strong></li>
+</ol>
+<ul>
+<li>进程的输入来自文件 command &lt; filename</li>
+</ul>
+<ol start="3">
+<li><strong>标准错误输出重定向</strong> command 2&gt; filename</li>
+</ol>
+<ul>
+<li>即将command错误运行时的错误日志写在filename中.</li>
+</ul>
+<ol start="4">
+<li><strong>管道</strong></li>
+</ol>
+<ul>
+<li>command1 | command2 将command1的输出重定向作为command2的输入重定向。</li>
+</ul>
+<h2 id="shell可识别的命令形式"><a href="#shell可识别的命令形式" class="headerlink" title="shell可识别的命令形式"></a>shell可识别的命令形式</h2><ol>
+<li><p>单条命令，即平常经常用的形式。</p>
+</li>
+<li><p>多条命令，可同时运行多条命令，提高键盘效率，<strong>需要注意的是，多条命令之间要以分号隔开.</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> who;<span class="built_in">pwd</span>;ls    -&gt; 依次运行who,<span class="built_in">pwd</span>,ls</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复合命令,即管道前后的命令组合，形成更强大的命令。</p>
+</li>
+<li><p>后台命令,多线程兵法,数量不限，充分利用系统资源。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -IR &gt; file_list &amp;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="shell变量和引用符。"><a href="#shell变量和引用符。" class="headerlink" title="shell变量和引用符。"></a>shell变量和引用符。</h2><ul>
+<li><p>系统的基本环境变量放在/etc/profile中，用户的环境变量放在用户主目录下的.profile。用户shell启动时，先执行系统环境变量，再执行用户环境变量。</p>
+</li>
+<li><p><strong>常用系统变量</strong></p>
+</li>
+</ul>
+<ol>
+<li>$0 当前shell程序的名称。</li>
+<li>$1 ~ $9 命令行上的第一个到第九个参数。</li>
+<li>$# 命令行上的参数个数。</li>
+<li>$* 命令行上的所有参数。</li>
+</ol>
+<ul>
+<li><p><strong>局部变量</strong></p>
+</li>
+<li><p>用户可自定义的变量，定义的时候注意变量名和等号不能有空格，在shell编程里，空格就是分隔符号。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">abc=12</span></span><br><span class="line"><span class="meta">$</span><span class="bash"><span class="built_in">echo</span> <span class="variable">$abc</span> </span></span><br><span class="line">12</span><br><span class="line"><span class="meta">$</span><span class="bash">_</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>引用局部变量的时候，一定要带上$符号。</p>
+</li>
+<li><p><strong>注意:单引号内部不能进行变量替换，而双引号则可以进行变量替换。</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> a=<span class="string">"he is a student"</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="string">"She said: <span class="variable">$a</span>"</span></span></span><br><span class="line">She said: he is a student</span><br><span class="line"><span class="meta">$</span><span class="bash"> b=<span class="string">'The value of a is $a'</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$b</span></span></span><br><span class="line">The value of a is $a</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>反撇号``</strong>,反撇号内部一般是命令，并且会执行该命令，如下.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> b=`date`     (反撇号中的字符串作为命令名)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">echo</span> <span class="variable">$b</span>   //此时b变量内部便是命令发出时候的日期</span></span><br><span class="line">Sat Feb 1 16:28:19 Beijing 2003</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>time命令: 显示当前shell命令花费的时间。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> time  find  /home  -name  core  –<span class="built_in">exec</span>  rm  &#123;&#125;  \; </span></span><br><span class="line">   real    2m 17.32s     该进程总运行时间</span><br><span class="line">   user   0m 7.63s       其中用户程序运行时间</span><br><span class="line">   sys     0m 6.79s       其中系统部分运行时间</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>值得注意的是 real &gt; user + sys 因为real中包含了进程切换的等待时间。</p>
+</li>
+</ul>
+<h2 id="进程监控"><a href="#进程监控" class="headerlink" title="进程监控"></a>进程监控</h2><ul>
+<li><p>“进程”是可运行程序在内存中的一次运行实例。</p>
+</li>
+<li><p>进程运行时都要经过类似: 创建 -&gt; 运行 -&gt; 等待 -&gt; 运行 -&gt; … -&gt; 等待 -&gt; 运行 -&gt; 结束 的声明周期。</p>
+</li>
+<li><p>于是周期大致可分为三种状态: 运行态,就绪态,睡眠态</p>
+</li>
+<li><p><strong>ps命令:获取进程状态信息</strong></p>
+</li>
+<li><p>不带ps的命令显示该用户当前活动进程的基本信息.</p>
+</li>
+<li><p>-e (或-a) 显示系统中<strong>所有活动</strong>进程信息</p>
+</li>
+<li><p>-f 显示进程的<strong>所有信息</strong>.</p>
+</li>
+<li><p><strong>sleep命令</strong></p>
+</li>
+<li><p>sleep time -&gt; 使进程暂停time秒</p>
+</li>
+<li><p><strong>kill命令</strong></p>
+</li>
+<li><p>终止进程。</p>
+</li>
+<li><p><strong>nice命令</strong></p>
+</li>
+<li><p>调整进程优先。</p>
+</li>
+</ul>
+<h1 id="6-UNIX通信"><a href="#6-UNIX通信" class="headerlink" title="6.UNIX通信"></a>6.UNIX通信</h1><ul>
+<li><p><strong>Unix通信分为内部通信系统和外部通信系统，这里介绍内部通信系统。</strong></p>
+</li>
+<li><p><strong>write命令</strong></p>
+</li>
+<li><p>write   username  [terminal],如果同一个名字的用户被多台终端登陆，则要进一步指定终端号.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> write  student2</span></span><br><span class="line">Hello, student2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>mesg命令</strong></p>
+</li>
+<li><p>mesg [-y][-n] 例子如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mesg                 查询本终端当前的消息接收状态</span></span><br><span class="line">  is  y                      可以接收消息</span><br><span class="line"><span class="meta">  $</span><span class="bash"> mesg  n             设置关闭状态</span></span><br><span class="line"><span class="meta">  $</span><span class="bash"> mesg                 查询本终端当前的消息接收状态</span></span><br><span class="line">  is  n                      拒绝接收消息</span><br><span class="line"><span class="meta">  $</span><span class="bash"> mesg  y             设置打开状态</span></span><br><span class="line"><span class="meta">  $</span><span class="bash"> mesg                 查询本终端当前的消息接收状态</span></span><br><span class="line">  is  y                      可以接收消息</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>talk命令</strong></p>
+</li>
+<li><p>talk命令和write命令相似，但talk命令是双向通信，必须双方都向对方发出talk命令才行。</p>
+</li>
+<li><p><strong>mail命令</strong></p>
+</li>
+<li><p>发送电子邮件 mail username</p>
+</li>
+</ul>
+<h1 id="7-Shell-编程"><a href="#7-Shell-编程" class="headerlink" title="7.Shell 编程"></a>7.Shell 编程</h1><ul>
+<li><strong>shell编程三步走:</strong></li>
+</ul>
+<ol>
+<li>建立shell文件。</li>
+<li>chmod改权限（可执行权限)。</li>
+<li>执行shell文件。</li>
+</ol>
+<h2 id="shell程序和语句"><a href="#shell程序和语句" class="headerlink" title="shell程序和语句"></a>shell程序和语句</h2><ul>
+<li><strong>语句分为三大类:</strong></li>
+</ul>
+<ol>
+<li>说明性语句。（即注释，以#开头)</li>
+<li>功能性语句。 (一些shell命令，下面会提到)</li>
+<li>结构性语句。（例如while，if这些判断语句）</li>
+</ol>
+<h3 id="几个常用功能性语句（命令）"><a href="#几个常用功能性语句（命令）" class="headerlink" title="几个常用功能性语句（命令）"></a>几个常用功能性语句（命令）</h3><ol>
+<li>read命令 ， read从标准输入读入一行，并赋值给后面的变量。</li>
+</ol>
+<ul>
+<li>read var  把读入的数据赋值给var<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">read  var1  var2  var3</span><br><span class="line">            ## 把读入行中的第一个词(word)赋给var1, 第二个词赋给var2, ……把其余所有的词赋给最后一个变量.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li><p>expr命令 用于简单的<strong>整数运算</strong>，+ - * / %.</p>
+</li>
+<li><p>tput命令 用于设置终端工作模式。</p>
+</li>
+</ol>
+<ul>
+<li>这里特殊说明下 tput clear -&gt; 清屏操作。</li>
+<li>详细请查阅ppt P152</li>
+</ul>
+<h3 id="结构性语句"><a href="#结构性语句" class="headerlink" title="结构性语句"></a>结构性语句</h3><ol>
+<li>if…then…fi</li>
+</ol>
+<ul>
+<li>结构如下: </li>
+<li>if    表达式<br>then  命令表1<br>else  命令表2<br>fi      -&gt;不要忘记 fi</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if [  -f   $1  ]                                             (测试参数是否为文件)</span><br><span class="line">then</span><br><span class="line">		echo "File  $1  exists"                     (引用变量值)</span><br><span class="line">fi</span><br><span class="line">if [  -d   $HOME/$1  ]                            (测试参数是否为目录)</span><br><span class="line">then </span><br><span class="line">		echo "File  $1  is  a  directory"       (引用变量值)</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p><strong>后面的内容请参照书，这里以后就不做对应笔记了。</strong></p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/12/24/Unix复习笔记/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/12/24/Unix复习笔记/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
