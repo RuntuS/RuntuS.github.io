@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>You-don-t-know-the-Javascript-2</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><h2 id="关于声明形式和构造形式"><a href="#关于声明形式和构造形式" class="headerlink" title="关于声明形式和构造形式"></a>关于声明形式和构造形式</h2><ul>
+<li><p>对象的声明方法有两种，即声明形式（也叫做文字形式）和构造形式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文字声明</span></span><br><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">    key1 : value1,</span><br><span class="line">    key2 : value2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//构造形式</span></span><br><span class="line"><span class="keyword">var</span> myObject = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">myObject.key1 = value1;</span><br><span class="line">myObject.key2 = value2;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>相比起来，文字声明方式比构造方式要方便许多，所以一般业界内部认为，能用文字声明就尽可能用文字声明方式。</p>
+</li>
+</ul>
+<h1 id="类型和对象"><a href="#类型和对象" class="headerlink" title="类型和对象"></a>类型和对象</h1><ul>
+<li><p>JavaScript中有六种主要类型，但是他们都不是对象。<br>即string,boolean,number,null,undefined.</p>
+</li>
+<li><p>而内置的对象有String,Number,Boolean,Object,Function,Array,Date,RegExp,Error。</p>
+</li>
+<li><p>首选区分一下类型string和对象String. 前者定义的值不是对象，是字面量，而后者定义的则是对象。<br>但是我们通常所用的一些关于字符串的方法，比如取长度，是<strong>对对象操作</strong>，而<strong>不是对字面量操作</strong>。<br>但是幸运的是，引擎能自动把字面量转化为对象。例子如下</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str =  <span class="string">"I am a string"</span>;<span class="comment">//这里还是字面量，不是对象。</span></span><br><span class="line"><span class="built_in">console</span>.log(str.length); <span class="comment">//这里str通过引擎转化为了对象。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>同理，Number与number也是这样的一个关系。</p>
+</li>
+<li><p>对于其他的几个内置对象，无论是用那种方式定义，都一定对象。</p>
+</li>
+</ul>
+<h2 id="对象中内容"><a href="#对象中内容" class="headerlink" title="对象中内容"></a>对象中内容</h2><ul>
+<li><p>对象的内容就是以key:value形式存在的一系列成员变量，但是要注意的是，<strong>真正的对象里存的只有属性的名称，而具体的内容则不会直接存储在对象内部，属性名称就如指针（引用）一样，指向这些值真正存储的地方。</strong></p>
+</li>
+<li><p>其次访问对象属性有两种模式，利用.操作符，或者利用[ ]操作符。代码如下.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    a : <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myObj.a; <span class="comment">// -&gt; 2</span></span><br><span class="line">myObj[<span class="string">"a"</span>]; <span class="comment">// -&gt; 2 也被称为键访问</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>两种访问的访问原理和访问结果都是一样的，大多数情况下利用.操作符，但是[ ]操作赋可以接受任意UTF8/Unicode字符串作为属性名，而.则不行，如下代码所示.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Obj = &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="string">"秦墨涵_*("</span>:<span class="string">"秦墨涵"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Obj[<span class="string">"秦墨涵_*("</span>]); <span class="comment">// "秦墨涵"</span></span><br><span class="line"><span class="built_in">console</span>.log(Obj.秦墨涵_*(); <span class="comment">// Error</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>还有一个细节，对象的属性名称都是<strong>字符串字面量</strong>，即使在定义时定义的是其他类型的值，那么也会被强制转换为一个字符串。</p>
+</li>
+<li><p>即使是变量作为属性名代入，也会先被替换会自己存储的值，然后将值转换为字符串，最后进行匹配。如下代码所示。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Obj = &#123;</span><br><span class="line">    <span class="number">1</span> : <span class="string">"Hello World!"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Obj[<span class="number">1</span>] ; <span class="comment">//Hello World!</span></span><br><span class="line">Obj[<span class="string">"1"</span>];<span class="comment">// Hello World!</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">	a : <span class="string">"你好"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> index = <span class="string">"a"</span>;</span><br><span class="line"></span><br><span class="line">myObj[index]; <span class="comment">// -&gt; 你好</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li><p>数组本身也是对象，也可以对数组进行键/值对的操作，但是赋值不会改变数组的长度。例如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> myArr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">myArr.baz = <span class="string">"baz"</span>;</span><br><span class="line"></span><br><span class="line">myArr.base = <span class="string">"base"</span>;</span><br><span class="line"></span><br><span class="line">myArr1[<span class="string">"3"</span>] = <span class="string">"4"</span>; <span class="comment">// -&gt; myArr -&gt; [1,2,3,'4']; </span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过myArr调用baz和base也一样会调用</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>但是咱们一般不会这样用，因为数组被设计出来本质就是用来进行下标/值对的操作的，而不是键/值对操作的。</strong></p>
+</li>
+<li><p>$\color{red}{但还是要注意，如果键的样子有些像数字，则会被自动转化为下标/值对的赋值，比如上方中的length赋值}$</p>
+</li>
+</ul>
+<h2 id="ES6的浅拷贝方法"><a href="#ES6的浅拷贝方法" class="headerlink" title="ES6的浅拷贝方法"></a>ES6的浅拷贝方法</h2><ul>
+<li>在ES6里定义了Object的assign方法来实现浅拷贝，可以把一个对象的属性拷贝到另一个对象里，<strong>但是不会把属性特性拷贝过去，例如writable，configurable。</strong>例如下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    a : <span class="number">2</span>,</span><br><span class="line">    b : anotherObj, <span class="comment">//是个引用</span></span><br><span class="line">    c : anotherArray, <span class="comment">//是个引用</span></span><br><span class="line">    d : func  <span class="comment">//是个引用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newObj = <span class="built_in">Object</span>.assign(&#123;&#125;, myObj);<span class="comment">//第一个是目标对象，该方法会遍历所有可枚举的自有键，将它们复制到目标对象里，并且最后返回目标对象。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(newObj); <span class="comment">// 和myObj一样的特性. 但是引用没有变化，所以这个是浅拷贝。</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="属性描述符"><a href="#属性描述符" class="headerlink" title="属性描述符"></a>属性描述符</h2><h1 id="this指针"><a href="#this指针" class="headerlink" title="this指针"></a>this指针</h1><h2 id="初识this"><a href="#初识this" class="headerlink" title="初识this"></a>初识this</h2><ul>
+<li><p>this是在运行时进行绑定的，而不是在编写的时候绑定的，this作用的上下文取决于函数调用的各种条件。</p>
+</li>
+<li><p>例如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">this</span>.bar();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);<span class="comment">//会出现错误。a is undefined</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这样一看，仿佛bar是在foo内部，其实并不然，实际情况this也是指向global的。</p>
+</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/01/14/You-don-t-know-the-Javascript-2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2020/01/14/You-don-t-know-the-Javascript-2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
