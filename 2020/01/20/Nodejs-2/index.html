@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>文件创建，删除与文件流</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="文件系统-创建与删除"><a href="#文件系统-创建与删除" class="headerlink" title="文件系统-创建与删除"></a>文件系统-创建与删除</h1><h2 id="创建文件夹-fs-mkdir"><a href="#创建文件夹-fs-mkdir" class="headerlink" title="创建文件夹(fs.mkdir)"></a>创建文件夹(fs.mkdir)</h2><ul>
+<li>分为同步创建和异步创建，用法和读写文件的函数用法是一样的，下面是代码展示。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="comment">//异步创建文件夹student</span></span><br><span class="line">fs.mkdir(<span class="string">"./student"</span>,(err) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span>(err) &#123;</span><br><span class="line">        <span class="keyword">throw</span> err;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"创建成功!"</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//同步创建文件夹teacher</span></span><br><span class="line"></span><br><span class="line">fs.mkdirSync(<span class="string">"./teacher"</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除文件夹-fs-rmdir"><a href="#删除文件夹-fs-rmdir" class="headerlink" title="删除文件夹(fs.rmdir)"></a>删除文件夹(fs.rmdir)</h2><ul>
+<li>删除文件夹分为同步删除和异步删除，用法和文件读写相同，<strong>但是有一点需要注意，和unix命令行操作一样，只能删除空文件夹。</strong></li>
+<li>于是可以考虑使用嵌套，先利用unlink删除文件夹里的内容，再删除文件夹。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//异步删除</span></span><br><span class="line">fs.unlink(<span class="string">"./🐂🍺/Good.js"</span>,(err) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">throw</span> err;</span><br><span class="line">    &#125;</span><br><span class="line">    fs.rmdir(<span class="string">'./🐂🍺'</span>, (err) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="keyword">throw</span> err;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"删除文件成功!"</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除文件-fs-unlink"><a href="#删除文件-fs-unlink" class="headerlink" title="删除文件(fs.unlink)"></a>删除文件(fs.unlink)</h2><ul>
+<li>删除文件和读写文件的函数格式是一样的，下面展示异步删除。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入模块</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);<span class="comment">//直接返回的是对象，不像事件，返回的是一个类</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// 调用方法</span></span><br><span class="line">fs.unlink(<span class="string">'./good.txt'</span>,(err) =&gt; &#123; <span class="comment">//删除good.txt这个文件</span></span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">throw</span> err</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"成功！"</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="服务器的创建-Http创建"><a href="#服务器的创建-Http创建" class="headerlink" title="服务器的创建(Http创建)"></a>服务器的创建(Http创建)</h1><h2 id="http模块"><a href="#http模块" class="headerlink" title="http模块"></a>http模块</h2><ul>
+<li>要创建一个http服务器，最主要的是引用http模块。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="createServer和listen方法"><a href="#createServer和listen方法" class="headerlink" title="createServer和listen方法"></a>createServer和listen方法</h2><ul>
+<li>通过createServer来创建一个服务器对象，并返回该服务器对象。并使用该对象来监听某个地址端口(即listen)。当该端口被访问的时候，<strong>执行createServer内定义的回调函数</strong>。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Server = http.createServer(<span class="function">(<span class="params">req,res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//.....</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">Server.on(<span class="number">8080</span>,<span class="string">"127.0.0.1"</span>); <span class="comment">//监听服务器端口</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="http响应头"><a href="#http响应头" class="headerlink" title="http响应头"></a>http响应头</h2><ul>
+<li>http响应头在响应头里定义(res)。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Server = http.createServer(<span class="function">(<span class="params">req,res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.writeHead(<span class="number">200</span>, &#123;<span class="string">'Content-Type'</span> : <span class="string">'text-plain'</span>&#125;);<span class="comment">//第一个参数为响应码，第二个参数说明相应的数据类型为哪一种。(这里是纯文本)</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Buffer-和-Stream-缓存流"><a href="#Buffer-和-Stream-缓存流" class="headerlink" title="Buffer 和 Stream (缓存流)"></a>Buffer 和 Stream (缓存流)</h2><ul>
+<li><strong>Buffer是一个全局对象，不需要手动引入。</strong></li>
+<li>Buffer就是起一个暂存的盒子的作用，里面装零散的，临时的数据流，然后一起打包发给客户端，这样效率会更高。<br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/Node/bufferYulantu.png" alt="buffer示意图"></li>
+</ul>
+<br>
+
+<ul>
+<li><strong>流是处理流数据的抽象接口</strong></li>
+<li>可以把buffer打包好的数据，以数据流的形式传递给客户端。</li>
+<li><strong>在Nodejs中可以改变数据流的方向。利用管道pipes改变。</strong></li>
+</ul>
+<h2 id="读写数据流-buffer-and-stream-两个重要数据流对象"><a href="#读写数据流-buffer-and-stream-两个重要数据流对象" class="headerlink" title="读写数据流(buffer  and stream): 两个重要数据流对象"></a>读写数据流(buffer  and stream): 两个重要数据流对象</h2><h3 id="createReadStream"><a href="#createReadStream" class="headerlink" title="createReadStream"></a>createReadStream</h3><ul>
+<li><p><strong>流读入不是一整块一整块地读入，而是分块分块的读，效率更高。</strong></p>
+</li>
+<li><p>通过createReadStream来创建输入数据流对象。这里只是创建，但是并没有开始执行读入操作。代码如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> MyReadStream = fs.createReadStream(__dirname + <span class="string">'/file.txt'</span>, <span class="string">'utf-8'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过事件触发来启动读入</span></span><br><span class="line">MyReadStream.on(<span class="string">'data'</span>,(data) =&gt; &#123; <span class="comment">//data即为每次读入的数据</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"正在读取"</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>值得注意的是: 1. 文件的读入是通过事件来启动读入的，并且事件名称约定俗成的为data，这是不能变的； 2. 其次不需要手动启动事件，程序运行的时候，自动启动该事件。 3. 最后，后面的参数名data可以改变，并且存储的是每一次读入的数据。</strong></p>
+</li>
+</ul>
+<h3 id="createWriteStream"><a href="#createWriteStream" class="headerlink" title="createWriteStream"></a>createWriteStream</h3><ul>
+<li>创建写入流对象，同理，通过该方法只是创建对象，并没有启动写入操作。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myWriteStream  =  fs.createWriteStream(__dirname+<span class="string">'/writeFile.txt'</span>,<span class="string">'utf-8'</span>);</span><br><span class="line"></span><br><span class="line">myWriteStream.write(data);<span class="comment">//通过write写入</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="pipe方法"><a href="#pipe方法" class="headerlink" title="pipe方法"></a>pipe方法</h3><ul>
+<li>pipe(管道)是读入流的方法，意义为将读入的内容通过管道”运输到”，对应的写入流上，格式如下。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">MyReadStream.pipe(MyWriteStream);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通常管道方法可以在传递res响应内容的时候运用，例如下。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs  = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function">(<span class="params">req,res</span>) =&gt;</span> &#123;</span><br><span class="line">    res.writeHead(<span class="number">200</span>,&#123;<span class="string">"Content-Type"</span> : <span class="string">"text/plain"</span>&#125;);</span><br><span class="line">    <span class="keyword">var</span> myReadStream = fs.createReadStream(__dirname + <span class="string">'/file.txt'</span>, <span class="string">'utf-8'</span>);</span><br><span class="line">    myReadStream.pipe(res);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">8088</span>,<span class="string">'127.0.0.1'</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>为何有流的出现，因为通过流的写入和读出，效率远远大于直接利用文件的读写方法，测试过，读相同的内容，stream只需要0.07s，但是利用文件的读方法需要0.2s。这个差距只会随着读取的内容越来越大。</strong></li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/01/20/Nodejs-2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2020/01/20/Nodejs-2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
