@@ -230,6 +230,65 @@
 <li><p><strong>(后续会一直更新)</strong></p>
 </li>
 </ul>
+<h1 id="2020-02-06更新"><a href="#2020-02-06更新" class="headerlink" title="2020.02.06更新"></a>2020.02.06更新</h1><h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><ul>
+<li>为了解决http是个无状态协议的问题。 </li>
+<li><strong>可用于身份认证，购物车，推荐等等，但是同时也存在隐私问题。</strong></li>
+<li><strong>下面是从cookie工作的原理图。sa</strong><br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/Node/cookie.png" alt></li>
+</ul>
+<h2 id="Web缓存-代理服务器技术"><a href="#Web缓存-代理服务器技术" class="headerlink" title="Web缓存/代理服务器技术"></a>Web缓存/代理服务器技术</h2><ul>
+<li>功能：<strong>在不妨问服务器的前提下满足客户端的http请求。</strong></li>
+<li>这个技术主要是用于性能优化的。</li>
+<li><strong>设置一个缓存服务器，客户端的请求发送至该缓存服务器，如果服务器有对应的响应报文，则直接发回给客户端；如果没有该报文，则直接去真正服务器的地方取对应响应消息。从而提高了效率，降低了带宽压力。</strong><h3 id="代理服务器怎么直到自己缓存的响应消息是最新的？-gt-条件GET方法"><a href="#代理服务器怎么直到自己缓存的响应消息是最新的？-gt-条件GET方法" class="headerlink" title="代理服务器怎么直到自己缓存的响应消息是最新的？ -&gt; 条件GET方法"></a>代理服务器怎么直到自己缓存的响应消息是最新的？ -&gt; 条件GET方法</h3></li>
+<li><strong>proxy通过if-modefied-since头部行去和真正server端的对应消息的对应字段进行比对</strong>，如果是最新的，则server端的响应消息不包含对象（304 Not Modified）。如果不是最新的，则会把最新的内容通过响应体发送回来。</li>
+</ul>
+<h2 id="Email应用"><a href="#Email应用" class="headerlink" title="Email应用"></a>Email应用</h2><ul>
+<li><p><strong>协议：SMTP</strong></p>
+<h3 id="Email应用的构成"><a href="#Email应用的构成" class="headerlink" title="Email应用的构成"></a>Email应用的构成</h3></li>
+<li><p>邮件客户端（user agent）</p>
+</li>
+<li><p>邮件服务器</p>
+</li>
+<li><p>SMTP协议（Simple Mail Transfer Protocol）</p>
+</li>
+<li><p><strong>邮件客户端的作用：读写Email信息，与服务器交互(注意，消息都是在各个服务器之间传递的)</strong></p>
+</li>
+<li><p><strong>下面是Email应用的交互示意图</strong><br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/Node/SMTP.png" alt></p>
+</li>
+</ul>
+<h3 id="邮件访问协议"><a href="#邮件访问协议" class="headerlink" title="邮件访问协议"></a>邮件访问协议</h3><ul>
+<li>收件人要从邮件服务器读邮件则不是使用的SMTP协议，而是用的邮件访问协议。</li>
+<li>例如:POP(Post Office Protocol) , IMAP(Internet Mail Access Protocol) , HTTP(Web邮件). </li>
+</ul>
+<h2 id="DNS-Domain-Name-System-应用"><a href="#DNS-Domain-Name-System-应用" class="headerlink" title="DNS(Domain Name System)应用"></a>DNS(Domain Name System)应用</h2><ul>
+<li>解决主机/路由器的识别问题。(IP地址/域名)</li>
+<li><strong>DNS是一个分布式的分层的数据库。</strong></li>
+</ul>
+<br>
+
+<ul>
+<li><strong>IP地址和域名之间映射问题</strong></li>
+<li>需要使用域名解析系统(DNS)来解决映射问题(把域名解析为IP地址)</li>
+<li><strong>DNS是Internet的核心功能，用应用层协议实现。</strong></li>
+</ul>
+<h3 id="DNS服务"><a href="#DNS服务" class="headerlink" title="DNS服务"></a>DNS服务</h3><ul>
+<li>域名 -&gt; IP地址 // 主机别名 // 邮件服务器别名 // 负载均衡: Web服务器</li>
+</ul>
+<h3 id="域名服务器的大概层次-因为是分层的"><a href="#域名服务器的大概层次-因为是分层的" class="headerlink" title="域名服务器的大概层次(因为是分层的)"></a>域名服务器的大概层次(因为是分层的)</h3><ul>
+<li><p>根域名服务器(全球13个) &gt; 顶级服务器(TLD,top-level domain): 负责com,org,net,edu等顶级域名和国家域名。 &gt; 权威域名服务器: 组织的域名解析服务器，提供组织内部服务器的解析服务</p>
+</li>
+<li><p><strong>注意本地域名解析服务器不严格属于层级体系</strong></p>
+</li>
+<li><p><strong>每个ISP有一个本地域名服务器(默认域名解析服务器) ， 当主机进行DNS查询时，查询被发送到本地域名服务器(在电脑上可以自己指定本地域名服务器): 即本地域名服务器可以做一个代理服务器(proxy)。</strong></p>
+</li>
+<li><p><strong>下面是DNS查询实例(迭代查询):每次都返回一条信息，如果找得到对应的域名解析，则返回的是IP地址，否则返回的是存有该IP解析的下级DNS服务器名字。</strong><br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/Node/DNS-%E8%BF%AD%E4%BB%A3.png" alt></p>
+</li>
+<li><p><strong>下面是DNS查询实例(递归查询):发出一次DNS查询，一次性返回结果。</strong><br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/Node/DNS-%E9%80%92%E5%BD%92.png" alt></p>
+</li>
+<li><p>$\color{red}{只要DNS获得域名-IP映射，就缓存一个映射。}$</p>
+</li>
+<li><p><strong>但是一段时间后，缓存条目失效(删除)// 本地域名服务器一般缓存顶级域名服务器的映射(所以根服务器不会被经常访问)</strong></p>
+</li>
+</ul>
 
             </div>
 
