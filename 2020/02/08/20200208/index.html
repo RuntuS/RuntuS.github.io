@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>CORS跨域问题</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="HTTP-CORS-Cross-Origin-Resource-Sharing-跨域资源共享"><a href="#HTTP-CORS-Cross-Origin-Resource-Sharing-跨域资源共享" class="headerlink" title="HTTP CORS(Cross-Origin Resource Sharing :跨域资源共享)"></a>HTTP CORS(Cross-Origin Resource Sharing :跨域资源共享)</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" target="_blank" rel="noopener">详细请查看MDN官方文档</a></p>
+<ul>
+<li><strong>下面有一个部分是介绍Origin的定义</strong></li>
+</ul>
+<h2 id="OPTIONS请求-RFC-7231"><a href="#OPTIONS请求-RFC-7231" class="headerlink" title="OPTIONS请求(RFC 7231)"></a>OPTIONS请求(RFC 7231)</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/OPTIONS" target="_blank" rel="noopener">参考文章:MDN-&gt;OPTIONS</a></p>
+<ul>
+<li>(客户端)用于获取目的资源(服务端)所支持的通信选项。<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS /index.html HTTP/1.1 </span><br><span class="line"></span><br><span class="line"><span class="keyword">OPTIONS</span> <span class="string">*</span> HTTP/1.1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="应用检测服务器所支持的请求方法"><a href="#应用检测服务器所支持的请求方法" class="headerlink" title="应用检测服务器所支持的请求方法"></a>应用检测服务器所支持的请求方法</h3><ul>
+<li><p>通过向服务器发送OPTIONS请求，服务器返回一个包含<strong>Allow首部字段</strong>的响应。该字段表明了服务器支持的所用HTTP方法。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Allow</span>: OPTIONS, GET, HEAD, POST  ----&gt; 支持options，get，head，post方法。</span><br><span class="line"><span class="attribute">Cache-Control</span>: max-age=604800</span><br><span class="line"><span class="attribute">Date</span>: Thu, 13 Oct 2016 11:45:00 GMT</span><br><span class="line"><span class="attribute">Expires</span>: Thu, 20 Oct 2016 11:45:00 GMT</span><br><span class="line"><span class="attribute">Server</span>: EOS (lax004/2813)</span><br><span class="line"><span class="attribute">x-ec-custom-error</span>: 1</span><br><span class="line"><span class="attribute">Content-Length</span>: 0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>CORS的预检请求</strong></p>
+</li>
+<li><p>在CORS跨域资源服务中，<strong>可以(这里后面会解释为什么是”可以”而不是”必须”)</strong>使用options方法发送一个请求，<strong>来检测实际的请求是否可以被服务器所接受。</strong></p>
+</li>
+<li><p>预检请求报文中的 <strong>Access-Control-Request-Method</strong> 首部字段告知服务器实际请求所使用的 HTTP 方法；<strong>Access-Control-Request-Headers</strong> 首部字段告知服务器实际请求所携带的自定义首部字段。服务器基于从预检请求获得的信息来判断，是否接受接下来的实际请求。</p>
+</li>
+<li><p>服务器所返回的 Access-Control-Allow-Methods 首部字段将所有允许的请求方法告知客户端。<strong>该首部字段与 Allow 类似，但只能用于涉及到 CORS 的场景中。</strong></p>
+</li>
+</ul>
+<h2 id="origin-源或者域"><a href="#origin-源或者域" class="headerlink" title="origin(源或者域)"></a>origin(源或者域)</h2><ul>
+<li><p>在Web里，origin被定义为由协议，域名，端口组成的整体。</p>
+</li>
+<li><p>两个相同的origin它们的协议，域名，端口必须相同。</p>
+</li>
+<li><p>例如 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://example.com/app1/index.html</span><br><span class="line">http://example.com/app2/index.html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面两个的origin是相同的，虽然它们的路径不相同。</p>
+</li>
+<li><p>又如</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://example.com/app1</span><br><span class="line">https://example.com/app2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上面两个的origin不同，区别在于http和https.</p>
+</li>
+</ul>
+<h2 id="CORS相关项"><a href="#CORS相关项" class="headerlink" title="CORS相关项"></a>CORS相关项</h2><ul>
+<li>简单请求不会触发CORS预检请求。</li>
+<li>所谓的简单请求，就是要同时满足下面三个要求。</li>
+</ul>
+<ol>
+<li>使用<strong>GET, HEAD , POST方法之一</strong>。</li>
+<li>Fetch定义的对CORS安全的首部字段集合，不得认为设置该集合之外的其他首部字体。</li>
+</ol>
+<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Content-Type （需要注意额外的限制）</li>
+<li>DPR</li>
+<li>Downlink</li>
+<li>Save-Data</li>
+<li>Viewport-Width</li>
+<li>Width</li>
+</ul>
+<ol start="3">
+<li>Content-Type的值仅限于下列三者之一:</li>
+</ol>
+<ul>
+<li><p>text/plain</p>
+</li>
+<li><p>multipart/form-data</p>
+</li>
+<li><p>application/x-www-form-urlencoded</p>
+</li>
+<li><p><strong>如果发生了预检请求，便是上述三者条件有一个以上的不满足时，会发送预检请求。</strong></p>
+</li>
+</ul>
+<h2 id="HTTP响应首部字段"><a href="#HTTP响应首部字段" class="headerlink" title="HTTP响应首部字段"></a>HTTP响应首部字段</h2><h3 id="Access-Control-Allow-Origin"><a href="#Access-Control-Allow-Origin" class="headerlink" title="Access-Control-Allow-Origin :  | *"></a>Access-Control-Allow-Origin : <origin> | *</origin></h3><ul>
+<li>origin参数的值制定了允许访问该资源的外域URI。(*是通配符)</li>
+</ul>
+<h3 id="Access-Control-Expose-Headers"><a href="#Access-Control-Expose-Headers" class="headerlink" title="Access-Control-Expose-Headers"></a>Access-Control-Expose-Headers</h3><ul>
+<li><p>定义服务器允许浏览器访问的头(head)。</p>
+</li>
+<li><p>例如 </p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Access-Control-Expose-Headers</span>: X-My-Custom-Header, X-Another-Custom-Header</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这样浏览器就能够通过getResponseHeader访问X-My-Custom-Header和 X-Another-Custom-Header 响应头了。</p>
+</li>
+</ul>
+<h3 id="Access-Control-Max-Age"><a href="#Access-Control-Max-Age" class="headerlink" title="Access-Control-Max-Age: "></a>Access-Control-Max-Age: <delta-seconds></delta-seconds></h3><ul>
+<li>指定请求的结果可以被缓存的时间。一旦过了时间则需要重新进行跨域请求。 </li>
+</ul>
+<h3 id="Access-Control-Allow-Methods"><a href="#Access-Control-Allow-Methods" class="headerlink" title="Access-Control-Allow-Methods"></a>Access-Control-Allow-Methods</h3><ul>
+<li>Access-Control-Allow-Methods 首部字段用于<strong>预检请求(是预检阶段的字段)的响应</strong>。其指明了实际请求所允许使用的 HTTP 方法。</li>
+</ul>
+<h3 id="Access-Control-Allow-Headers"><a href="#Access-Control-Allow-Headers" class="headerlink" title="Access-Control-Allow-Headers"></a>Access-Control-Allow-Headers</h3><ul>
+<li>Access-Control-Allow-Headers首部字段用于<strong>预检请求的响应</strong>。其指明了实际请求中允许携带的首部字段。</li>
+</ul>
+<h2 id="HTTP-请求首部字段"><a href="#HTTP-请求首部字段" class="headerlink" title="HTTP 请求首部字段"></a>HTTP 请求首部字段</h2><ul>
+<li>本节列出了可用于发起跨域请求的首部字段。请注意，这些首部字段无须手动设置。 当开发者使用 XMLHttpRequest 对象发起跨域请求时，它们已经被设置就绪。</li>
+</ul>
+<h3 id="Origin："><a href="#Origin：" class="headerlink" title="Origin："></a>Origin：<origin></origin></h3><ul>
+<li>Origin 首部字段表明预检请求或实际请求的源站。</li>
+<li><strong>注意，不管是否为跨域请求，ORIGIN 字段总是被发送。</strong></li>
+</ul>
+<h3 id="Access-Control-Request-Method"><a href="#Access-Control-Request-Method" class="headerlink" title="Access-Control-Request-Method:"></a>Access-Control-Request-Method:<method></method></h3><ul>
+<li>Access-Control-Request-Method 首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器.</li>
+</ul>
+<h3 id="Access-Control-Request-Headers"><a href="#Access-Control-Request-Headers" class="headerlink" title="Access-Control-Request-Headers"></a>Access-Control-Request-Headers</h3><ul>
+<li>Access-Control-Request-Headers 首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。</li>
+</ul>
+<h1 id="跨域实战"><a href="#跨域实战" class="headerlink" title="跨域实战"></a>跨域实战</h1><ul>
+<li>遇到跨域，一般有两种解决方案。</li>
+</ul>
+<ol>
+<li>第一种，绕开跨域，即通过改变头部字段防止options请求发出，从而避开跨域。</li>
+<li>第二种，开启跨域，在后端作跨域权限处理，使得访问得以进行。</li>
+</ol>
+<ul>
+<li><p>一开始懒，想前端直接改一个Content-type : application/x-www-form-urlencoded 就可以直接避开跨域。但是问题是，这种数据的格式比较难处理，需要在后端一块一块的接受数据，最后再进行json转化，比较复杂（试了许多次，都没成功）</p>
+</li>
+<li><p>后面尝试第二种方法，直接让Content-type : application/json 。直接传一个json数据过去，岂不美滋滋。<br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/%E5%89%8D%E7%AB%AF1/%E8%B7%A8%E5%9F%9F1.png" alt></p>
+</li>
+<li><p>这样做就必须在后端进行字段允许处理。一开始，我很疑惑，觉得后端，已经允许了可以application/json，为什么依然会被跨域拒绝访问。(跨域处理字段如下)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">app.all(<span class="string">'*'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123; </span><br><span class="line">    res.header(<span class="string">"Content-Type"</span>, <span class="string">"application/json;charset=utf-8"</span>); <span class="comment">//就是这里！</span></span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);  </span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"X-Requested-With,"</span>); </span><br><span class="line">    res.header(<span class="string">"Access-Control-Allow-Methods"</span>,<span class="string">"PUT,POST,GET,DELETE,OPTIONS"</span>);  </span><br><span class="line">    res.header(<span class="string">"X-Powered-By"</span>,<span class="string">' 3.2.1'</span>);  </span><br><span class="line">    <span class="built_in">console</span>.log(req.method);  </span><br><span class="line">    <span class="keyword">if</span>(req.method === <span class="string">'OPTIONS'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        res.send(<span class="string">"Options"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        next();  </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;);  <span class="comment">//跨域处理</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>后面搜集网上资料，恍然大悟，虽然允许字段内容可以是json，但是没有允许字段头可以是Content-type(从上面的笔记整理可知，Content-type字段是有限制的),所以就必须在Access-Control-Allow-Headers头部后面加上对应字段，改后的该字段内容如下。</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">res.header(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"X-Requested-With,content-type"</span>);  <span class="comment">//允许接受content-type的跨域。</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>成功解决跨域问题。 并且接受到的post数据还是json数据，美滋滋。</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/02/08/20200208/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2020/02/08/20200208/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
