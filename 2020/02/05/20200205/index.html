@@ -200,6 +200,8 @@
 </li>
 <li><p>正如备注所说，中间件处理链顺序是<strong>根据声明先后而确定的。并且通过next()传递，假如这里无next，则永远无法到达get请求，即会一直处于请求阶段。</strong></p>
 </li>
+<li><p>不仅仅考虑中间件的顺序，路由请求的顺序也要考虑进去，如果请求在整个中间件的前面，那么中间件会失效。(因为res.send已经把请求给结束了，请求响应无法传递下去。)</p>
+</li>
 </ul>
 <h3 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h3><ul>
 <li><strong>路径参数是命名的 URL 段，用于捕获在 URL 中的位置指定的值。命名段以冒号为前缀，然后是名称（例如 /:your_parameter_name/。捕获的值保存在 req.params 对象中，键即参数名（例如 req.params.your_parameter_name）。</strong></li>
