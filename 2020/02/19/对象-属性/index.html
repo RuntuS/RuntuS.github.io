@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>对象-属性</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><h2 id="ES6可计算属性名"><a href="#ES6可计算属性名" class="headerlink" title="ES6可计算属性名"></a>ES6可计算属性名</h2><ul>
+<li>即对象属性的名字是可以根据实际环境而变动的。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> prefix = ...<span class="comment">//prefix可以根据实际而变动</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">  [prefix + <span class="string">"bar"</span>] : <span class="string">"bar"</span> ,</span><br><span class="line">  [prefix + <span class="string">"baz"</span>] : <span class="string">"baz"</span>  <span class="comment">//与普通生命声明不同的在于括号上。</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="对象的复制"><a href="#对象的复制" class="headerlink" title="对象的复制"></a>对象的复制</h2><ul>
+<li><p>复制本身分为浅拷贝和深拷贝。对于前者，只能复制对应的基本类型值，但是引用无法复制，引用还是以前的引用；而后者则是一起复制，<strong>以前的引用和现在的引用完全不关联。</strong></p>
+</li>
+<li><p>深拷贝。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过JSON转换来间接实现</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    min_obj : &#123;</span><br><span class="line">        a : <span class="number">1</span></span><br><span class="line">    &#125;,</span><br><span class="line">    b : <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> newObj = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj));<span class="comment">//先将obj转化为JSON字符串，再通过JSON.parse回转</span></span><br><span class="line"></span><br><span class="line">newObj.min_obj.a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(obj.min_obj.a); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(newObj.min_obj.a); <span class="comment">//2 </span></span><br><span class="line"><span class="comment">//可以看出，两个的min_obj对象不相同。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浅拷贝，<strong>ES6提供了一种浅拷贝方法，Object.assign(..)</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myObject = &#123;</span><br><span class="line">    a : <span class="number">1</span>,</span><br><span class="line">    b : <span class="number">2</span>,</span><br><span class="line">    min_obj : &#123;</span><br><span class="line">        c : <span class="number">3</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> newObj = <span class="built_in">Object</span>.assign(&#123;&#125;,myObject);<span class="comment">//第一个参数是拷贝后的存放对象，这里设置为空；第二个是被拷贝对象。最后会返回拷贝完成的对象。</span></span><br><span class="line"></span><br><span class="line">newObj.min_obj === myObject.min_obj <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="属性描述符-ES5开始的属性描述符"><a href="#属性描述符-ES5开始的属性描述符" class="headerlink" title="属性描述符(ES5开始的属性描述符)"></a>属性描述符(ES5开始的属性描述符)</h2><h3 id="数据描述符，writable-可写-，enumerable-可枚举的-configurable-可配置的"><a href="#数据描述符，writable-可写-，enumerable-可枚举的-configurable-可配置的" class="headerlink" title="数据描述符，writable(可写)，enumerable(可枚举的),configurable(可配置的)"></a>数据描述符，writable(可写)，enumerable(可枚举的),configurable(可配置的)</h3><ul>
+<li><p>首先对于数据描述符，其实就是对象属性的值，而与之协同的，还要三个属性，分别是标题的三种属性。</p>
+</li>
+<li><p>可以通过<strong>Object.defineProperty()</strong>来<strong>显式添加一个新属性，或者更改一个已有属性。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myObj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(myObj,<span class="string">"a"</span>,&#123;</span><br><span class="line">    value : <span class="number">2</span>,</span><br><span class="line">    writable : <span class="literal">true</span>,</span><br><span class="line">    configurable : <span class="literal">true</span> ,</span><br><span class="line">    enumerable : <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myObj.a; <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Object.defineProperty()</strong>第一个参数指定添加属性对象，第二个参数表明属性名称，第三个属性便是相关属性配置。</p>
+</li>
+</ul>
+<h3 id="writable和configurable"><a href="#writable和configurable" class="headerlink" title="writable和configurable"></a>writable和configurable</h3><ul>
+<li><p><strong>对于writable，如果为false，则在非严格环境下，无法对现有的值进行更改；如果在严格环境下，则会报错。</strong></p>
+</li>
+<li><p><strong>对于configurable，如果为false，则无法对所有属性描述符进行修改(所以这是个单向操作),但是还是可以对属性值进行更改。</strong></p>
+</li>
+<li><p>所以基于上面两种属性描述符，如果都设置成false，则可以形成一个常量值(类似ES6的const定义)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myObj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(myObj,<span class="string">"a"</span>,&#123;</span><br><span class="line">    value : <span class="number">2</span>,</span><br><span class="line">    writable : <span class="literal">false</span>,</span><br><span class="line">    configurable : <span class="literal">false</span> ,</span><br><span class="line">    enumerable : <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myObj.a ; <span class="comment">//常量</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>$\color{red}{注意这里常量只有对应属性是常量，只是说不能对这个属性进行任何操作，包括删除delete；而对于对象，是可以改变的，这个要区别与const定义。}$</p>
+</li>
+</ul>
+<br>
+
+<h3 id="enumerable-可枚举的"><a href="#enumerable-可枚举的" class="headerlink" title="enumerable(可枚举的)"></a>enumerable(可枚举的)</h3><ul>
+<li><p><strong>enumerable(可枚举的)，在一些对象遍历的方法中，不可枚举属性是不会被遍历到的，例如for…in循环，Object.keys()方法</strong></p>
+</li>
+<li><p>Object.keys()返回一个数组，包含所有可枚举的<strong>属性名</strong>。当然它不会顺着原型链去找上面的属性，只会找本对象的直接属性。这和<strong>Object.getOwnPropertyNames()是差不多，getOwnPropertyNames()也只能查找对象直接包含的属性。</strong></p>
+</li>
+<li><p>检查对象属性是否可枚举的直接方法是使用 <strong>propertyIsEnumerable()</strong>方法。 </p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myObj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(myObj,<span class="string">"a"</span>,&#123;</span><br><span class="line">    value : <span class="number">2</span>,</span><br><span class="line">    writable : <span class="literal">true</span>,</span><br><span class="line">    configurable : <span class="literal">true</span>,</span><br><span class="line">    enumerable : <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myobj.b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">myobj.propertyIsEnumerable(<span class="string">"a"</span>);<span class="comment">//false</span></span><br><span class="line">myobj.propertyIsEnumerable(<span class="string">"b"</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/02/19/对象-属性/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2020/02/19/对象-属性/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

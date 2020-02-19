@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/weilai.png">
+	<link rel="shortcut icon" href="/img/weilai.png">
+	
+			    <title>
+    Laolan's blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="miccall">
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/background.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">Runtu</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/RuntuS" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>sheetjs学习</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="sheetjs学习"><a href="#sheetjs学习" class="headerlink" title="sheetjs学习"></a>sheetjs学习</h1><p><a href="https://github.com/SheetJS/sheetjs#parsing-options" target="_blank" rel="noopener">详情请参考GitHub文档</a></p>
+<h3 id="基本数据结构层次"><a href="#基本数据结构层次" class="headerlink" title="基本数据结构层次"></a>基本数据结构层次</h3><ul>
+<li>下面是基本数据结构大小。</li>
+<li>workbook(工作簿) &gt; wooksheet(工作表) &gt; desired_cell(单元格) &gt; desired_value(存储值)</li>
+<li>This example extracts the value stored in cell A1 from the first worksheet:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> first_sheet_name = workbook.SheetNames[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">var</span> address_of_cell = <span class="string">'A1'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Get worksheet */</span></span><br><span class="line"><span class="keyword">var</span> worksheet = workbook.Sheets[first_sheet_name];</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Find desired cell */</span></span><br><span class="line"><span class="keyword">var</span> desired_cell = worksheet[address_of_cell];</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Get the value */</span></span><br><span class="line"><span class="keyword">var</span> desired_value = (desired_cell ? desired_cell.v : <span class="literal">undefined</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="将工作表（worksheet）添加进工作簿-workbook"><a href="#将工作表（worksheet）添加进工作簿-workbook" class="headerlink" title="将工作表（worksheet）添加进工作簿(workbook)"></a>将工作表（worksheet）添加进工作簿(workbook)</h3><ul>
+<li>本例子使用<strong>XLSX.utils.aoa_to_sheet</strong>新建一个表，使用<strong>XLSX.utils.book_append_sheet</strong>将表添加进工作簿。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws_name = <span class="string">"SheetJS"</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">/* make worksheet */</span></span><br><span class="line"><span class="keyword">var</span> ws_data = [</span><br><span class="line">  [ <span class="string">"S"</span>, <span class="string">"h"</span>, <span class="string">"e"</span>, <span class="string">"e"</span>, <span class="string">"t"</span>, <span class="string">"J"</span>, <span class="string">"S"</span> ],</span><br><span class="line">  [  <span class="number">1</span> ,  <span class="number">2</span> ,  <span class="number">3</span> ,  <span class="number">4</span> ,  <span class="number">5</span> ]</span><br><span class="line">];</span><br><span class="line"><span class="keyword">var</span> ws = XLSX.utils.aoa_to_sheet(ws_data);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Add the worksheet to the workbook */</span></span><br><span class="line">XLSX.utils.book_append_sheet(wb, ws, ws_name);<span class="comment">//wb工作簿，ws工作表，ws_name工作表名</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>注意，XLSX.utils相关属性将在下面提到。</strong></li>
+</ul>
+<h3 id="新建一个工作簿"><a href="#新建一个工作簿" class="headerlink" title="新建一个工作簿"></a>新建一个工作簿</h3><ul>
+<li>wokrbook对象包含一个SheetNames数组(存储着表名)和一个Sheets对象。<strong>XLSX.utils.book_new</strong>方法构造新workbook对象。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> wb = XLSX.utils.book_new();</span><br><span class="line"><span class="comment">//创建一个新工作簿，如果工作簿是空的，则写功能会错误。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="xlsx-utils一些常用的函数"><a href="#xlsx-utils一些常用的函数" class="headerlink" title="xlsx.utils一些常用的函数"></a>xlsx.utils一些常用的函数</h3><ul>
+<li><strong>XLSX.utils.sheet_to_csv</strong> generates CSV</li>
+<li><strong>XLSX.utils.sheet_to_txt</strong> generates UTF16 Formatted Text</li>
+<li><strong>XLSX.utils.sheet_to_html</strong> generates HTML</li>
+<li><strong>XLSX.utils.sheet_to_json</strong> generates an array of objects</li>
+<li><strong>XLSX.utils.sheet_to_formulae</strong> generates a list of formulae</li>
+</ul>
+<h3 id="Writing-Workbooks"><a href="#Writing-Workbooks" class="headerlink" title="Writing Workbooks"></a>Writing Workbooks</h3><ul>
+<li>使用辅助函数write或writeFile来辅助输出。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">require</span> !== <span class="string">'undefined'</span>) XLSX = <span class="built_in">require</span>(<span class="string">'xlsx'</span>);</span><br><span class="line"><span class="comment">/* output format determined by filename */</span></span><br><span class="line">XLSX.writeFile(workbook, <span class="string">'out.xlsb'</span>);</span><br><span class="line"><span class="comment">/* at this point, out.xlsb is a file that you can distribute */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Parsing-functions-解析函数"><a href="#Parsing-functions-解析函数" class="headerlink" title="Parsing functions(解析函数)"></a>Parsing functions(解析函数)</h2><ul>
+<li><strong>XLSX.read(data, read_opts)</strong>解析data。</li>
+<li><strong>XLSX.readFile(filename, read_opts)</strong>，读取某个文件里的信息，并尝试去解析。</li>
+</ul>
+<h2 id="实用工具对象-Utilities"><a href="#实用工具对象-Utilities" class="headerlink" title="实用工具对象(Utilities)"></a>实用工具对象(Utilities)</h2><ul>
+<li>Utilities are available in the <strong>XLSX.utils</strong> object and are described in the Utility Functions section:<h3 id="信息导入-Importing"><a href="#信息导入-Importing" class="headerlink" title="信息导入(Importing)"></a>信息导入(Importing)</h3></li>
+<li>下面值列出json模式下的转换（因为是后台需要)</li>
+<li><strong>json_to_sheet converts an array of JS objects to a worksheet.</strong></li>
+<li><strong>adds an array of JS objects to an existing worksheet.</strong></li>
+</ul>
+<h3 id="信息导出-Exporting"><a href="#信息导出-Exporting" class="headerlink" title="信息导出(Exporting)"></a>信息导出(Exporting)</h3><ul>
+<li>sheet_to_json converts a worksheet object to an array of JSON objects.</li>
+</ul>
+<h3 id="Cell-and-cell-address-manipulation-单元和单元地址操作"><a href="#Cell-and-cell-address-manipulation-单元和单元地址操作" class="headerlink" title="Cell and cell address manipulation(单元和单元地址操作)"></a>Cell and cell address manipulation(单元和单元地址操作)</h3><ul>
+<li>encode_cell / decode_cell (转换单元格地址)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cell_address = &#123;<span class="attr">c</span>: C , <span class="attr">r</span>:R&#125;;<span class="comment">//存储的单元地址数据</span></span><br><span class="line"><span class="keyword">var</span> cell_ref = XLSX.utils.encode_cell(cell_address);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="下面将通过一个实际简单读取操作，来具体说明单元项里每个参数的意义"><a href="#下面将通过一个实际简单读取操作，来具体说明单元项里每个参数的意义" class="headerlink" title="下面将通过一个实际简单读取操作，来具体说明单元项里每个参数的意义"></a>下面将通过一个实际简单读取操作，来具体说明单元项里每个参数的意义</h3><ul>
+<li><p>Excel表如图<br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/Node/excel.png" alt></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xlsx = <span class="built_in">require</span>(<span class="string">"xlsx"</span>);</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"><span class="keyword">const</span> buffer = fs.readFileSync(<span class="string">"exp.xlsx"</span>);</span><br><span class="line"><span class="keyword">const</span> wb = xlsx.read(buffer,&#123;<span class="attr">type</span>:<span class="string">"buffer"</span>&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(wb.Sheets.Sheet1);<span class="comment">//</span></span><br><span class="line"><span class="comment">/* 下面是输出展示</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">  '!ref': 'A1:D2',</span></span><br><span class="line"><span class="comment">  A1: &#123; t: 'n', v: 123, w: '123' &#125;,</span></span><br><span class="line"><span class="comment">  B1: &#123; t: 'n', v: 2, w: '2' &#125;,</span></span><br><span class="line"><span class="comment">  C1: &#123; t: 'n', v: 3, w: '3' &#125;,</span></span><br><span class="line"><span class="comment">  D1: &#123; t: 'n', v: 4, w: '4' &#125;,</span></span><br><span class="line"><span class="comment">  A2: &#123;</span></span><br><span class="line"><span class="comment">    t: 's',</span></span><br><span class="line"><span class="comment">    v: 'a',</span></span><br><span class="line"><span class="comment">    r: '&lt;t&gt;a&lt;/t&gt;&lt;phoneticPr fontId="1" type="noConversion"/&gt;',</span></span><br><span class="line"><span class="comment">    h: 'a',</span></span><br><span class="line"><span class="comment">    w: 'a'</span></span><br><span class="line"><span class="comment">  &#125;,</span></span><br><span class="line"><span class="comment">  B2: &#123;</span></span><br><span class="line"><span class="comment">    t: 's',</span></span><br><span class="line"><span class="comment">    v: 'b',</span></span><br><span class="line"><span class="comment">    r: '&lt;t&gt;b&lt;/t&gt;&lt;phoneticPr fontId="1" type="noConversion"/&gt;',</span></span><br><span class="line"><span class="comment">    h: 'b',</span></span><br><span class="line"><span class="comment">    w: 'b'</span></span><br><span class="line"><span class="comment">  &#125;,</span></span><br><span class="line"><span class="comment">  C2: &#123;</span></span><br><span class="line"><span class="comment">    t: 's',</span></span><br><span class="line"><span class="comment">    v: 'c',</span></span><br><span class="line"><span class="comment">    r: '&lt;t&gt;c&lt;/t&gt;&lt;phoneticPr fontId="1" type="noConversion"/&gt;',</span></span><br><span class="line"><span class="comment">    h: 'c',</span></span><br><span class="line"><span class="comment">    w: 'c'</span></span><br><span class="line"><span class="comment">  &#125;,</span></span><br><span class="line"><span class="comment">  D2: &#123;</span></span><br><span class="line"><span class="comment">    t: 's',</span></span><br><span class="line"><span class="comment">    v: '你们好',</span></span><br><span class="line"><span class="comment">    r: '&lt;t&gt;你们好&lt;/t&gt;&lt;phoneticPr fontId="1" type="noConversion"/&gt;',</span></span><br><span class="line"><span class="comment">    h: '你们好',</span></span><br><span class="line"><span class="comment">    w: '你们好'</span></span><br><span class="line"><span class="comment">  &#125;,</span></span><br><span class="line"><span class="comment">  '!margins': &#123;</span></span><br><span class="line"><span class="comment">    left: 0.7,</span></span><br><span class="line"><span class="comment">    right: 0.7,</span></span><br><span class="line"><span class="comment">    top: 0.75,</span></span><br><span class="line"><span class="comment">    bottom: 0.75,</span></span><br><span class="line"><span class="comment">    header: 0.3,</span></span><br><span class="line"><span class="comment">    footer: 0.3</span></span><br><span class="line"><span class="comment">  &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>输出关键字中属性解释</strong></p>
+</li>
+</ul>
+<ol>
+<li>v : raw value -&gt; 原始数值。</li>
+<li>t : type (类型) -&gt; 包括 b：Boolean，e：Error，n：Number，d：Date，s：Text，Z：Stub。</li>
+<li>w : formatted text (if applicable) -&gt; 格式化文本</li>
+<li>r : rich text enchding -&gt; 富文本编码</li>
+<li>h ： HTML rendering of the rich text (if applicable) : HTML格式呈现的富文本。</li>
+<li>[“!ref”]属性: 指定表的起始位置，在上述例子中,为A1:D2。(如果提前指定，则超过该属性的不会受理)</li>
+<li>[“!margins”]属性 : 代表页边距的对象。 </li>
+</ol>
+<h2 id="基于以上学习，可以知道如何实现后端下载功能。"><a href="#基于以上学习，可以知道如何实现后端下载功能。" class="headerlink" title="基于以上学习，可以知道如何实现后端下载功能。"></a>基于以上学习，可以知道如何实现后端下载功能。</h2><ul>
+<li>首先基于sheetjs实现xlsx表格化，先下载到服务器本地，然后再通过express的download进行传输。</li>
+</ul>
+<h2 id="设计细节"><a href="#设计细节" class="headerlink" title="设计细节"></a>设计细节</h2><ul>
+<li>在前端，需要跳转到对应服务器的下载地址才能下载，所以需要使用<code>window.location.href</code>来指定服务器下载地址。</li>
+<li>在后端，请求头要写为对应的Excel导出请求头，否则显示的是json文件(因为跨域默认了Content-type字段为 application/json)[这是各个文件Content-type参照表的网址]</li>
+<li>(<a href="https://tool.oschina.net/commons/" target="_blank" rel="noopener">https://tool.oschina.net/commons/</a>)</li>
+</ul>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2020/02/19/sheetjs学习/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2020/02/19/sheetjs学习/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
