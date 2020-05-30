@@ -204,6 +204,61 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myObj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(myObj,<span class="string">"a"</span>,&#123;</span><br><span class="line">    value : <span class="number">2</span>,</span><br><span class="line">    writable : <span class="literal">true</span>,</span><br><span class="line">    configurable : <span class="literal">true</span>,</span><br><span class="line">    enumerable : <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myobj.b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">myobj.propertyIsEnumerable(<span class="string">"a"</span>);<span class="comment">//false</span></span><br><span class="line">myobj.propertyIsEnumerable(<span class="string">"b"</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="其他不常用的属性描述符-不变性-gt-是针对与整个对象的"><a href="#其他不常用的属性描述符-不变性-gt-是针对与整个对象的" class="headerlink" title="其他不常用的属性描述符(不变性)-&gt; 是针对与整个对象的"></a>其他不常用的属性描述符(不变性)-&gt; 是针对与整个对象的</h3><h4>禁止扩展Object.prevent.Extensions(..)</h4>
+
+<ul>
+<li><strong>禁止一个对象添加新属性并且保留已有属性</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObject = &#123;</span><br><span class="line">    a : <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.prevent.Extensions(myObject);<span class="comment">//这里操作的是整个对象</span></span><br><span class="line"></span><br><span class="line">myObject.b = <span class="number">3</span>;</span><br><span class="line">myObject.b;<span class="comment">//undefined 如果是严格模式，会出现TypeError</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4>密封Object.seal(..)</h4>
+
+<ul>
+<li>这个方法实际就是在现有对象调用禁止扩展方法，并把<strong>所有属性</strong>的可配置属性调为false，使整个对象无法重新配置或者删除任何属性(但是可以修改属性值)。</li>
+</ul>
+<h4>冻结Object.freeze()(级别最高的不可变性)</h4>
+
+<ul>
+<li><p>通过该方法创建冻结对象，实际就是在<strong>密封</strong>基础上，再将可写性调为false，使得整个对象的属性值无法被改变，<strong>但是对于这个对象引用的其他对象里面的值依然是可以改变的，无法改变的是对象的直接属性值。</strong></p>
+</li>
+<li><p><strong>所以上述三者强度依次为: Object.freeze &gt; Object.seal &gt; Object.prevent.Extensions</strong></p>
+</li>
+</ul>
+<h3 id="GET-与-PUT"><a href="#GET-与-PUT" class="headerlink" title="[[GET]] 与 [PUT]]"></a>[[GET]] 与 [PUT]]</h3><ul>
+<li>在进行一次属性访问的时候，实质上就是执行一次[[GET]]操作。</li>
+<li>当给对象的属性赋值的时候，会触发[[PUT]]操作来设置或者创建这个对象，实际上，其被触发后的行为取决与许多因素，<strong>其中最重要的因素是对象是否存在这个属性。</strong></li>
+<li>如果已经存在这个属性,[[PUT]]算法会依次检查下面的内容。</li>
+</ul>
+<ol>
+<li>属性是否访问描述符，如果是且存在setter就调用setter。（setter在下面会说）。</li>
+<li>属性writable是否为false？</li>
+<li>如果都不是，则进行赋值操作。</li>
+</ol>
+<ul>
+<li>如果对象不存在这个属性，则会在原型链上进行操作。</li>
+</ul>
+<h2 id="访问描述符-Getter与Setter-gt-ES5中可以改写默认操作"><a href="#访问描述符-Getter与Setter-gt-ES5中可以改写默认操作" class="headerlink" title="访问描述符: Getter与Setter -&gt; ES5中可以改写默认操作"></a>访问描述符: Getter与Setter -&gt; ES5中可以改写默认操作</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    <span class="keyword">get</span> a()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(</span><br><span class="line">    myObj,</span><br><span class="line">    <span class="string">"b"</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span>: function()&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.a * <span class="number">2</span>;</span><br><span class="line">        &#125;,</span><br><span class="line">        enumerable : <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">myObj.a; <span class="comment">//2</span></span><br><span class="line">myObj.b; <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>两者在对象中都创建了一个不包含值的对象，<strong>一旦调用这个属性，就执行对应的getter函数，使得其访问值为return的值。</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    <span class="keyword">get</span> a()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">myObj.a = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">myObj.a ; <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>由于我们只定义了getter，则对a进行设置时，set操作会忽略赋值操作。<strong>即使有了setter操作，也是无用的，因为只要一调用属性，get函数的优先级永远是最高的，返回值永远是2，所以一般不会在getter上返回一个常数。</strong></p>
+</li>
+<li><p>一般来说getter与setter是成对出现的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myObj = &#123;</span><br><span class="line">    <span class="keyword">get</span> a()&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>._a_;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">set</span> a(val)&#123;</span><br><span class="line">        <span class="keyword">this</span>._a_ = val * <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">myObj.a = <span class="number">2</span>; <span class="comment">//执行了setter操作，将2赋给了val</span></span><br><span class="line"></span><br><span class="line">myObj.a; <span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这里就可以说明[[PUT]]操作为何要检测是否有setter函数。</p>
+</li>
+</ul>
+<h3 id="for-of-与-iterator"><a href="#for-of-与-iterator" class="headerlink" title="for..of 与 iterator"></a>for..of 与 iterator</h3><ul>
+<li><p>ES6出现的for..of方法，能够使的起遍历iterator对象中的每一个属性的值，一般默认的iterator对象有Array，Map，Set。与for…in不同的是，for…in遍历的是每个属性的属性名而不是值，而for…of则是直接遍历值。</p>
+</li>
+<li><p>普通的对象没有内置的@@iterator，所以无法自动完成for…of遍历。(迭代器的定义超出本章所涉及的范围，将在以后的博客中写到)</p>
+</li>
+</ul>
 
             </div>
 
@@ -266,8 +321,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2020/02/19/对象-属性/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2020/02/19/对象-属性/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://laolan-runtu.xyz/2020/02/19/对象-属性/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://laolan-runtu.xyz/2020/02/19/对象-属性/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

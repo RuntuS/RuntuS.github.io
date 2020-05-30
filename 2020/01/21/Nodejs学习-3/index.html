@@ -151,34 +151,32 @@
 </nav>
 
         <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://photo-1258955954.cos.ap-chengdu.myqcloud.com/%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87/beauty.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>谈谈学习感想</h2></a>
+            <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Nodejs(3)</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="杂谈-干货"><a href="#杂谈-干货" class="headerlink" title="杂谈+干货"></a>杂谈+干货</h1><h2 id="杂谈"><a href="#杂谈" class="headerlink" title="杂谈"></a>杂谈</h2><ul>
-<li><p>原本想在博客上写一些自己学习的内容，但后面发现，这不仅花费时间，<br>而且有时候也比较没啥意义。要写的话，应该是技巧，况且发现自己也抽不出那么多时间<br>来频繁更新大量的博客。</p>
-</li>
-<li><p>于是便想着更新一下技巧，但是自己的基础实在太少，谈技巧又为时过早。于是博客就这么荒废了<br>十多天。</p>
-</li>
-<li><p>从发觉这点起，便到处重新开始学习CSS(本来已经开始在学JS)。菜鸟教程只能当字典用，mooc上的<br>不全，后来发现，还是看书比较舒服. <a href="http://www.ituring.com.cn/book/1910" target="_blank" rel="noopener">精通CSS,高级web标准解决方案</a></p>
-</li>
-<li><p>并且发现，前面看的内容并不是没有作用，还记得一个月前的我看这书，根本看不下去，现在看却非常<br>轻松，<strong>看来以后学语言，一定要有个大局观，把整体大概了解了，再来学习细节</strong></p>
-</li>
-<li><p>就谈那么多，下面还是来点干货.</p>
-</li>
+                <h1 id="npm-Node-Package-Manager"><a href="#npm-Node-Package-Manager" class="headerlink" title="npm(Node Package Manager)"></a>npm(Node Package Manager)</h1><ul>
+<li>必要文件package.json： 定义项目中所需要的各种模块，以及配置信息。</li>
+<li>如果要使用npm来下载其他第三方库，则必须要package.json。</li>
 </ul>
-<h2 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h2><h3 id="关于图片背景的大小问题"><a href="#关于图片背景的大小问题" class="headerlink" title="关于图片背景的大小问题"></a>关于图片背景的大小问题</h3><ul>
-<li><p>图片的大小用 background-size 来设定。<br>这里主要谈两个值 100%和contain.</p>
+<h1 id="Express框架"><a href="#Express框架" class="headerlink" title="Express框架"></a>Express框架</h1><h2 id="nodemon工具"><a href="#nodemon工具" class="headerlink" title="nodemon工具"></a>nodemon工具</h2><ul>
+<li>在开发环境下，需要一个工具自动重启项目工程。（源代码改变的时候)</li>
+<li>借助nodemon来代替node进行启动。</li>
+<li>通过nodemon filename.js 来启动某个文件。</li>
+</ul>
+<h2 id="Express框架的使用"><a href="#Express框架的使用" class="headerlink" title="Express框架的使用"></a>Express框架的使用</h2><ul>
+<li><p><strong>Express框架已经封装好了服务器，路由，中间件以及网络请求等。</strong></p>
 </li>
-<li><p>对于100%,是相对于其本身元素而言的,我们可以设置成两个百分之百,使得图片完全展示于网页,<br>但是存在一个问题,图片的宽高比例会改变.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div#content</span><br><span class="line">&#123;</span><br><span class="line">	background-image:url(...);</span><br><span class="line">	background-size:100% 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意一个细节，image的设定一定要在size之前忙，否则先设置的size只是对没有图片时的背景设置.<br>此时在加背景图片,则会使得背景图片覆盖掉size属性.</p>
+<li><p><strong>使用步骤: npm安装Express -&gt; 引入Express框架 -&gt; 实例化Express的对象(Express是个类) -&gt; 通过对象调用方法</strong></p>
 </li>
-<li><p>当然我们可以改进使的图片的宽度或者高度 保持 100% ，而另一个方向则设置 auto，浏览器会自动调整<br>背景的高度与宽度.</p>
+<li><p>值得注意的是，实例化对象的时候，不需要用new，因为express已经封装好了接口。如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = express();</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>第二个便是 contain值，contain使得背景不会被剪切，自身的宽高比不会改变，并且以最大限度来展示在<br>背景中。如下图所示。<br><img src="https://photo-1258955954.cos.ap-chengdu.myqcloud.com/%E5%89%8D%E7%AB%AF1/%E6%9D%82%E8%B0%88.jpg" alt="杂谈"></p>
+<li><p>Express是集成了许多功能的框架，直接调用API即可。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = epxress();</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>,(req,res) =&gt; &#123;<span class="comment">//get请求路由</span></span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">8080</span>);<span class="comment">//这个是监听的端口</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述代码就简单地实现了一个服务。</p>
 </li>
 </ul>
 
@@ -243,8 +241,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://laolan-runtu.xyz/2019/05/28/谈谈学习感想/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://laolan-runtu.xyz/2019/05/28/谈谈学习感想/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://laolan-runtu.xyz/2020/01/21/Nodejs学习-3/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://laolan-runtu.xyz/2020/01/21/Nodejs学习-3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

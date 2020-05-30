@@ -152,31 +152,24 @@
 
         <div id="main">
             <div class="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>Nodejs(3)</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2></h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="npm-Node-Package-Manager"><a href="#npm-Node-Package-Manager" class="headerlink" title="npm(Node Package Manager)"></a>npm(Node Package Manager)</h1><ul>
-<li>必要文件package.json： 定义项目中所需要的各种模块，以及配置信息。</li>
-<li>如果要使用npm来下载其他第三方库，则必须要package.json。</li>
-</ul>
-<h1 id="Express框架"><a href="#Express框架" class="headerlink" title="Express框架"></a>Express框架</h1><h2 id="nodemon工具"><a href="#nodemon工具" class="headerlink" title="nodemon工具"></a>nodemon工具</h2><ul>
-<li>在开发环境下，需要一个工具自动重启项目工程。（源代码改变的时候)</li>
-<li>借助nodemon来代替node进行启动。</li>
-<li>通过nodemon filename.js 来启动某个文件。</li>
-</ul>
-<h2 id="Express框架的使用"><a href="#Express框架的使用" class="headerlink" title="Express框架的使用"></a>Express框架的使用</h2><ul>
-<li><p><strong>Express框架已经封装好了服务器，路由，中间件以及网络请求等。</strong></p>
+                <ul>
+<li><p>Vue -&gt; translation组件需要在满足四者条件之一的情况下才能触发</p>
 </li>
-<li><p><strong>使用步骤: npm安装Express -&gt; 引入Express框架 -&gt; 实例化Express的对象(Express是个类) -&gt; 通过对象调用方法</strong></p>
+<li><p>条件渲染 (使用 v-if)</p>
 </li>
-<li><p>值得注意的是，实例化对象的时候，不需要用new，因为express已经封装好了接口。如下。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = express();</span><br></pre></td></tr></table></figure>
+<li><p>条件展示 (使用 v-show)</p>
 </li>
-<li><p>Express是集成了许多功能的框架，直接调用API即可。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = epxress();</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>,(req,res) =&gt; &#123;<span class="comment">//get请求路由</span></span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">8080</span>);<span class="comment">//这个是监听的端口</span></span><br></pre></td></tr></table></figure>
+<li><p>动态组件</p>
 </li>
-<li><p>上述代码就简单地实现了一个服务。</p>
+<li><p>组件根节点</p>
+</li>
+<li><p>特别说明下v-if情况，可以通过vue声明周期函数来间接激发过渡效果，但是要注意，不能在created时进行激活(因为此时组件还没有挂载出来，无法起到激活效果)。</p>
+</li>
+<li><p>所以可以放到mounted周期来激活效果。</p>
 </li>
 </ul>
 
@@ -241,8 +234,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2020/01/21/Nodejs-3/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2020/01/21/Nodejs-3/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://laolan-runtu.xyz/2020/02/20/20200220/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://laolan-runtu.xyz/2020/02/20/20200220/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
